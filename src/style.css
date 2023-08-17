@@ -1,8 +1,22 @@
-:root {
+body {
   background-color: #f2f5fa;
   font-family: Inter, sans-serif;
 }
-body {
+.dark {
+  background-color: #181a1b;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: end;
+}
+header > svg {
+  margin-right: 0.2rem;
+}
+
+/* MAIN */
+main {
   display: grid;
   place-content: center;
 }
@@ -29,6 +43,9 @@ body {
   display: grid;
   grid-template-rows: auto auto auto 1fr auto;
 }
+.dark .project {
+  background-color: #25282a;
+}
 .project > img {
   width: 100%;
 
@@ -43,10 +60,16 @@ body {
   margin-bottom: 0;
   color: rgb(23, 23, 23);
 }
+.dark .project > h3 {
+  color: rgb(229, 229, 229);
+}
 .project > p {
   font-size: 14px;
   line-height: 20px;
   color: rgb(156, 163, 175);
+}
+.dark .project > p {
+  color: rgb(163, 163, 163);
 }
 .project > .tags {
   gap: 4px;
@@ -58,6 +81,10 @@ body {
   background-color: rgb(243, 244, 246);
   color: rgb(107, 114, 128);
   border-radius: 6px;
+}
+.dark .project > .tags > span {
+  color: rgb(107, 114, 128);
+  background-color: rgb(24, 26, 27);
 }
 .project > .buttons {
   display: flex;
@@ -77,6 +104,9 @@ body {
 .project > .buttons > a:hover {
   color: black;
   transform: scale(1.1);
+}
+.dark .project > .buttons > a:hover {
+  color: white;
 }
 
 @media (max-width: 1200px) {
