@@ -1,0 +1,81 @@
+:root {
+  background-color: #f2f5fa;
+  font-family: Inter, sans-serif;
+}
+
+/* PROJECTS */
+.projects {
+  margin: 2rem 15rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  gap: 3rem;
+}
+
+.project {
+  margin-top: 100px;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px;
+}
+.project > img {
+  margin-top: -100px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.project > h3 {
+  font-weight: bold;
+  font-size: 1rem;
+  color: rgb(23, 23, 23);
+}
+.project > p {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(156, 163, 175);
+}
+.project > .tags {
+  gap: 4px;
+}
+.project > .tags > span {
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: rgb(243, 244, 246);
+  color: rgb(107, 114, 128);
+  border-radius: 6px;
+}
+.project > .buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.project > .buttons > a {
+  color: rgb(107, 114, 128);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.project > .buttons svg {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+.project > .buttons > a:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+  .projects {
+    margin: 2rem 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    margin: 1.5rem;
+  }
+}
