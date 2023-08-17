@@ -2,13 +2,19 @@
   background-color: #f2f5fa;
   font-family: Inter, sans-serif;
 }
+body {
+  display: grid;
+  place-content: center;
+}
 
 /* PROJECTS */
 .projects {
-  margin: 2rem 15rem;
+  margin: 2rem 0;
+  width: 50vw;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  grid-template-columns: repeat(2, minmax(325px, 1fr));
+  justify-content: center;
   gap: 3rem;
 }
 
@@ -19,10 +25,14 @@
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px;
+
+  display: grid;
+  grid-template-rows: auto auto auto 1fr auto;
 }
 .project > img {
-  margin-top: -100px;
   width: 100%;
+
+  margin-top: -100px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
@@ -30,6 +40,7 @@
 .project > h3 {
   font-weight: bold;
   font-size: 1rem;
+  margin-bottom: 0;
   color: rgb(23, 23, 23);
 }
 .project > p {
@@ -50,6 +61,7 @@
 }
 .project > .buttons {
   display: flex;
+  justify-content: end;
   gap: 1rem;
   margin-top: 1.2rem;
 }
@@ -69,13 +81,14 @@
 
 @media (max-width: 1200px) {
   .projects {
-    margin: 2rem 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    width: 75vw;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
   }
 }
 
 @media (max-width: 600px) {
   .projects {
-    margin: 1.5rem;
+    width: 90vw;
+    grid-template-columns: minmax(275px, 500px);
   }
 }
