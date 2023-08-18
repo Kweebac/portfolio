@@ -5,7 +5,6 @@ import "./images/weatherApp.png";
 import "./images/todoList.png";
 import "./images/adminDashboard.png";
 
-const header = document.querySelector("header");
 const colorTheme = document.querySelector(".colorTheme");
 const body = document.querySelector("body");
 
