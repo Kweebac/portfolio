@@ -1,6 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Sora&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
 body {
   background-color: #f2f5fa;
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .dark {
   background-color: #181a1b;
@@ -8,12 +15,37 @@ body {
 
 /* HEADER */
 header {
-  position: fixed;
-  padding: 1rem;
-  margin-left: calc(100% - 28.1833px - 2rem);
+  padding: 1.2rem;
+  position: sticky;
+  top: 0;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr auto;
+  align-items: center;
 }
-header svg {
-  transform: scale(2);
+header > nav {
+  justify-self: center;
+}
+header > nav > ul {
+  list-style: none;
+  font-size: 1.2rem;
+  margin: 0;
+
+  display: flex;
+  gap: 3rem;
+}
+header > nav a {
+  color: rgb(75, 85, 99);
+  text-decoration: none;
+}
+.dark header > nav a {
+  color: rgb(229, 231, 235);
+}
+
+header .colorTheme svg {
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 /* MAIN */
@@ -21,10 +53,22 @@ main {
   display: grid;
   place-content: center;
 }
+main > h1 {
+  font-family: "Sora", sans-serif;
+  font-size: 2rem;
+  letter-spacing: -1px;
+  font-weight: 100;
+}
+main > h1 > span {
+  font-size: 1.1rem;
+}
+.dark main > h1 {
+  color: white;
+}
 
 /* PROJECTS */
 .projects {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   width: 50vw;
 
   display: grid;
@@ -117,7 +161,7 @@ main {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .projects {
     width: 90vw;
     grid-template-columns: minmax(275px, 500px);
